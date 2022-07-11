@@ -1,0 +1,76 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./dist/css/index.css" />
+    <title>Margin</title>
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar collapse">
+        <div class="head">
+          <img src="./Images/account-thumbnail.jpg" />
+          <div class="greeting">
+            <p>Hello,</p>
+            <p class="name">Andrew</p>
+          </div>
+          <i class="fa-solid fa-bars hamburger"></i>
+        </div>
+        <section class="pages">
+          <div class="container">
+            <a href="" class="page">
+              Day in life
+              <p class="date">july 11 2022</p>
+            </a>
+            <a href="" class="page">
+              Day in life
+              <p class="date">july 11 2022</p>
+            </a>
+            <a href="" class="page">
+              Day in life
+              <p class="date">july 11 2022</p>
+            </a>
+          </div>
+        </section>
+        <footer>
+          <a href="https://andrewberty.vercel.app" class="copyright"
+            >&copy; Designed & Developed by
+            <span class="name">Andrew Berty</span></a
+          >
+          <div class="bottom">
+            <div class="add-note">
+              <i class="fa-solid fa-plus add"></i>
+              <button>Add new note</button>
+            </div>
+            <i class="fa-solid fa-circle-half-stroke theme-toggler"></i>
+          </div>
+        </footer>
+      </aside>
+      <main>
+        <div class="hero-area">
+          <textarea
+            class="main-title"
+            placeholder="Page title.."
+            maxlength="14"
+          ></textarea>
+          <span class="date">Date</span>
+          <img src="https://fillmurray.com/200/300" alt="" />
+          <textarea class="body" placeholder="Type Here..."></textarea>
+          </textarea>
+        </div>
+      </main>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.17/marked.min.js"
+      integrity="sha512-vSD33WvMJMZwnOWxigzY4MmmUnGqY4APr91CZ4h3UTJ29AmZ8vW3WOwKycGptx7ow1f2SDYKLchv/qKnYHWI+w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./dist/js/app.js"></script>
+  </body>
+</html>

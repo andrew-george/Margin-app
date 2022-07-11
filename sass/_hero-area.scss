@@ -1,0 +1,51 @@
+@use 'variables' as *;
+.hero-area {
+  display: flex;
+  flex-direction: column;
+  max-width: 70%;
+  height: 80vh;
+  margin: auto;
+  @media (min-width: 768px) {
+    width: 50%;
+    margin: auto;
+  }
+
+  .main-title {
+    font-family: $serif;
+    font-size: 2rem;
+    border: none;
+    resize: none;
+    line-height: 0.6;
+    @media (min-width: 768px) {
+      font-size: 3rem;
+    }
+
+    &:focus {
+      outline: none;
+    }
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  .date {
+    font-size: 1rem;
+    color: #aaa;
+  }
+
+  .body {
+    border: none;
+    height: 100%;
+    font-family: $sans;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 3rem;
+    resize: none;
+
+    &:focus {
+      outline: none;
+    }
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}

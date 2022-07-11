@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap");
+:root {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: initial;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  background-color: inherit;
+  color: inherit;
+}
+
+body {
+  font-family: "Karla";
+}
+
+main::-webkit-scrollbar {
+  width: 6px; /* width of the entire scrollbar */
+}
+main::-webkit-scrollbar-track {
+  background: #000000; /* color of the tracking area */
+}
+main::-webkit-scrollbar-thumb {
+  background-color: rgb(255, 255, 255); /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+}
+
+.app {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.sidebar {
+  display: flex;
+  position: fixed;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  width: 220px;
+  transition: 0.2s ease all;
+  background-color: #f5f5f5;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  margin: 1.5rem auto;
+}
+.head img {
+  aspect-ratio: 1/1;
+  width: 60px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 100%;
+  margin-right: 10px;
+}
+.head .greeting * {
+  margin: 0;
+}
+.head .greeting .name {
+  font-family: "DM Serif Display";
+  font-size: 1.2rem;
+  margin-right: 2rem;
+}
+.head .hamburger {
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.pages {
+  width: 100%;
+}
+.pages .container {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 80%;
+  margin: auto;
+}
+.pages .container .page {
+  margin: 0.4rem;
+}
+.pages .container .page .date {
+  margin: 0.2rem 0;
+  font-size: 0.7rem;
+  color: #aaa;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: auto;
+  margin-bottom: 1.5rem;
+  margin-inline: auto;
+  cursor: pointer;
+}
+footer .bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .copyright {
+  text-align: center;
+  font-size: 0.65rem;
+  max-width: 120px;
+  color: #aaa;
+  transition: 0.2s ease all;
+  text-decoration: none;
+  margin-bottom: 2rem;
+}
+footer .copyright:hover {
+  color: #000;
+  cursor: pointer;
+}
+footer .copyright .name {
+  font-weight: 700;
+}
+footer .theme-toggler {
+  font-size: 1.2rem;
+  position: absolute;
+  right: 8%;
+  cursor: pointer;
+}
+
+.hero-area {
+  display: flex;
+  flex-direction: column;
+  max-width: 70%;
+  height: 80vh;
+  margin: auto;
+}
+@media (min-width: 768px) {
+  .hero-area {
+    width: 50%;
+    margin: auto;
+  }
+}
+.hero-area .main-title {
+  font-family: "DM Serif Display";
+  font-size: 2rem;
+  border: none;
+  resize: none;
+  line-height: 0.6;
+}
+@media (min-width: 768px) {
+  .hero-area .main-title {
+    font-size: 3rem;
+  }
+}
+.hero-area .main-title:focus {
+  outline: none;
+}
+.hero-area .main-title::-webkit-scrollbar {
+  display: none;
+}
+.hero-area .date {
+  font-size: 1rem;
+  color: #aaa;
+}
+.hero-area .body {
+  border: none;
+  height: 100%;
+  font-family: "Karla";
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 3rem;
+  resize: none;
+}
+.hero-area .body:focus {
+  outline: none;
+}
+.hero-area .body::-webkit-scrollbar {
+  display: none;
+}
+
+.collapse {
+  transform: translateX(-170px);
+}
+
+.hidden {
+  display: none;
+}
+
+.dark-mode {
+  background-color: #000000;
+  color: white;
+}
+
+.dark-sidebar {
+  background-color: #050505;
+  color: white;
+}/*# sourceMappingURL=index.css.map */
