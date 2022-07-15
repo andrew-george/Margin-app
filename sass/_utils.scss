@@ -4,6 +4,9 @@
 .hidden {
   display: none;
 }
+.selected {
+  border: 1px solid red;
+}
 .dark-mode {
   background-color: #000000;
   color: white;

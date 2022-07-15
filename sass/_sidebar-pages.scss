@@ -1,14 +1,33 @@
 .pages {
   width: 100%;
-  .container {
+  .pages-container {
     display: flex;
     flex-direction: column;
     text-align: left;
-    width: 80%;
-    margin: auto;
+    width: 65%;
+    margin-left: 1.5rem;
+    height: 65vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      width: 2px; /* width of the entire scrollbar */
+      border-radius: 30px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #d8d8d8a6; /* color of the tracking area */
+      border-radius: 30px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: rgb(64, 64, 64); /* color of the scroll thumb */
+      border-radius: 30px; /* roundness of the scroll thumb */
+    }
 
     .page {
       margin: 0.4rem;
+      cursor: pointer;
 
       .date {
         margin: 0.2rem 0;

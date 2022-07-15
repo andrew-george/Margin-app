@@ -9,6 +9,13 @@
     width: 50%;
     margin: auto;
   }
+  .delete-btn {
+    font-size: 1.5rem;
+    position: fixed;
+    bottom: 3%;
+    right: 3%;
+    cursor: pointer;
+  }
 
   .main-title {
     font-family: $serif;
@@ -26,10 +33,6 @@
     &::-webkit-scrollbar {
       display: none;
     }
-  }
-  .date {
-    font-size: 1rem;
-    color: #aaa;
   }
 
   .body {

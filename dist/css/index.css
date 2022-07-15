@@ -95,17 +95,33 @@ main {
 .pages {
   width: 100%;
 }
-.pages .container {
+.pages .pages-container {
   display: flex;
   flex-direction: column;
   text-align: left;
-  width: 80%;
-  margin: auto;
+  width: 65%;
+  margin-left: 1.5rem;
+  height: 65vh;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
-.pages .container .page {
+.pages .pages-container::-webkit-scrollbar {
+  width: 2px; /* width of the entire scrollbar */
+  border-radius: 30px;
+}
+.pages .pages-container::-webkit-scrollbar-track {
+  background: rgba(216, 216, 216, 0.6509803922); /* color of the tracking area */
+  border-radius: 30px;
+}
+.pages .pages-container::-webkit-scrollbar-thumb {
+  background-color: rgb(64, 64, 64); /* color of the scroll thumb */
+  border-radius: 30px; /* roundness of the scroll thumb */
+}
+.pages .pages-container .page {
   margin: 0.4rem;
+  cursor: pointer;
 }
-.pages .container .page .date {
+.pages .pages-container .page .date {
   margin: 0.2rem 0;
   font-size: 0.7rem;
   color: #aaa;
@@ -135,7 +151,6 @@ footer .copyright {
   margin-bottom: 2rem;
 }
 footer .copyright:hover {
-  color: #000;
   cursor: pointer;
 }
 footer .copyright .name {
@@ -161,6 +176,13 @@ footer .theme-toggler {
     margin: auto;
   }
 }
+.hero-area .delete-btn {
+  font-size: 1.5rem;
+  position: fixed;
+  bottom: 3%;
+  right: 3%;
+  cursor: pointer;
+}
 .hero-area .main-title {
   font-family: "DM Serif Display";
   font-size: 2rem;
@@ -178,10 +200,6 @@ footer .theme-toggler {
 }
 .hero-area .main-title::-webkit-scrollbar {
   display: none;
-}
-.hero-area .date {
-  font-size: 1rem;
-  color: #aaa;
 }
 .hero-area .body {
   border: none;
@@ -205,6 +223,10 @@ footer .theme-toggler {
 
 .hidden {
   display: none;
+}
+
+.selected {
+  border: 1px solid red;
 }
 
 .dark-mode {

@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="./dist/css/index.css" />
     <title>Margin</title>
   </head>
-  <body>
+  <body class="">
     <div class="app">
-      <aside class="sidebar collapse">
+      <aside class="sidebar">
         <div class="head">
           <img src="./Images/account-thumbnail.jpg" />
           <div class="greeting">
@@ -22,19 +22,11 @@
           <i class="fa-solid fa-bars hamburger"></i>
         </div>
         <section class="pages">
-          <div class="container">
-            <a href="" class="page">
+          <div class="pages-container">
+            <!-- <div href="" class="page">
               Day in life
               <p class="date">july 11 2022</p>
-            </a>
-            <a href="" class="page">
-              Day in life
-              <p class="date">july 11 2022</p>
-            </a>
-            <a href="" class="page">
-              Day in life
-              <p class="date">july 11 2022</p>
-            </a>
+            </div> -->
           </div>
         </section>
         <footer>
@@ -58,19 +50,19 @@
             placeholder="Page title.."
             maxlength="14"
           ></textarea>
-          <span class="date">Date</span>
-          <img src="https://fillmurray.com/200/300" alt="" />
           <textarea class="body" placeholder="Type Here..."></textarea>
           </textarea>
+          <i class="fa-solid fa-trash-can delete-btn"></i>
         </div>
       </main>
     </div>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.17/marked.min.js"
       integrity="sha512-vSD33WvMJMZwnOWxigzY4MmmUnGqY4APr91CZ4h3UTJ29AmZ8vW3WOwKycGptx7ow1f2SDYKLchv/qKnYHWI+w=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script src="./dist/js/app.js"></script>
+    <script type="module" src="./dist/js/main.js"></script>
   </body>
 </html>
