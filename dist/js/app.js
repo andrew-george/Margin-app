@@ -4,7 +4,6 @@ const sidebar = document.querySelector('.sidebar');
 const hamburger = document.querySelector('.hamburger');
 const themeToggler = document.querySelector('.theme-toggler');
 const mainEl = document.querySelector('main');
-const textAreas = document.querySelectorAll('textarea');
 const pagesContainer = document.querySelector('.pages-container');
 const addNoteBtn = document.querySelector('.add-note');
 let deleteBtn;
@@ -56,14 +55,18 @@ function renderInSidebar(id, title = 'Untitled', date = new date()) {
 }
 
 function renderInPreview(id, title = '', date = new date(), body = '') {
+  const isBodyDark = bodyEl.classList.contains('dark-mode');
+  // console.log(isBodyDark ? 'dark-mode' : '');
   const markup = `
         <div class="hero-area" data-page-id=${id}>
           <textarea
-            class="main-title"
+            class="main-title ${isBodyDark ? 'dark-mode' : ''}"
             placeholder="Page title.."
             maxlength="20"
           >${title}</textarea>
-          <textarea class="body" placeholder="Type Here...">${body}</textarea>
+          <textarea class="body ${
+            isBodyDark ? 'dark-mode' : ''
+          }" placeholder="Type Here...">${body}</textarea>
           <i class="fa-solid fa-trash-can delete-btn"></i>
         </div>
   `;
@@ -199,6 +202,7 @@ function removePage(id) {
 //* SETUP
 window.addEventListener('DOMContentLoaded', () => {
   //- retrieve LS and render List
+
   updateView();
   addListeners();
 
@@ -209,14 +213,18 @@ window.addEventListener('DOMContentLoaded', () => {
     sidebar.classList.toggle('collapse')
   );
 
-  //- dark theme toggle
+  // - dark theme toggle
   themeToggler.addEventListener('click', () => {
-    const textAreas = document.querySelectorAll('textarea');
+    updateView();
+
+    document.querySelectorAll('textarea').forEach(area => {
+      area.classList.toggle('dark-mode');
+    });
 
     sidebar.classList.toggle('dark-sidebar');
     bodyEl.classList.toggle('dark-mode');
-    textAreas.forEach(area => area.classList.toggle('dark-mode'));
-    pagesEl.forEach(page => page.classList.toggle('dark-sidebar'));
+    renderSelection();
+    addListeners();
   });
 });
 
