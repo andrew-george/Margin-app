@@ -233,6 +233,7 @@ footer .theme-toggler {
 
 .selected {
   background-color: #edebeb;
+  color: #000000;
   border-radius: 3px;
 }
 
