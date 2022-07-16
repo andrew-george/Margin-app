@@ -22,7 +22,7 @@ function saveLS(pageToSave) {
 
   if (existing) {
     //-update
-    existing.title = pageToSave.title;
+    existing.title = pageToSave.title ? pageToSave.title : 'Untitled';
     existing.body = pageToSave.body;
     existing.date = Intl.DateTimeFormat('en-us', {
       dateStyle: 'medium',
@@ -78,17 +78,21 @@ function renderInPreview(id, title = '', date = new date(), body = '') {
     Swal.fire({
       text: 'Delete this page?',
       icon: 'question',
+      iconColor: '#666',
+      width: '18rem',
       toast: 'true',
       confirmButtonColor: '#dd0000',
       showCancelButton: 'true',
       confirmButtonText: 'Yes!',
-    }).then(() => {
-      removePage(pageToDelete.id);
+    }).then(result => {
+      if (result.isConfirmed) {
+        removePage(pageToDelete.id);
+      }
     });
   });
 }
 
-function addSelectListener() {
+function addListeners() {
   //- retrieve DOM elements
   const pagesEl = document.querySelectorAll('.page');
 
@@ -154,7 +158,7 @@ function checkForEdits() {
     saveLS(fetchedObj);
     updateView();
     renderSelection();
-    addSelectListener();
+    addListeners();
   });
 
   noteInput.addEventListener('input', e => {
@@ -166,7 +170,7 @@ function checkForEdits() {
     saveLS(fetchedObj);
     updateView();
     renderSelection();
-    addSelectListener();
+    addListeners();
   });
 }
 
@@ -188,7 +192,7 @@ function removePage(id) {
     updateView();
     select(firstObj.id);
     renderInPreview(firstObj.id, firstObj.title, firstObj.date, firstObj.body);
-    addSelectListener();
+    addListeners();
   }
 }
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -196,7 +200,7 @@ function removePage(id) {
 window.addEventListener('DOMContentLoaded', () => {
   //- retrieve LS and render List
   updateView();
-  addSelectListener();
+  addListeners();
 
   //* Additional Features
 
@@ -232,7 +236,7 @@ addNoteBtn.addEventListener('click', () => {
 
   saveLS(page);
   updateView();
-  addSelectListener();
+  addListeners();
   select(page.id);
 });
 

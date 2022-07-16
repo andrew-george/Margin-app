@@ -2,8 +2,8 @@
 .hero-area {
   display: flex;
   flex-direction: column;
-  max-width: 70%;
-  height: 80vh;
+  width: 70%;
+  height: 90vh;
   margin: auto;
   @media (min-width: 768px) {
     width: 50%;
@@ -20,10 +20,11 @@
   .main-title {
     font-family: $serif;
     font-size: 2rem;
-    padding: 0.8rem 0;
+    padding: 2rem 0;
     border: none;
     resize: none;
     line-height: 0.6;
+    margin-top: 2rem;
     @media (min-width: 768px) {
       font-size: 3rem;
     }
@@ -38,18 +39,29 @@
 
   .body {
     border: none;
-    height: 100%;
+    height: 100vw;
     font-family: $sans;
     font-size: 1rem;
     font-weight: 500;
     margin-top: 3rem;
     resize: none;
+    overflow-y: auto;
 
     &:focus {
       outline: none;
     }
     &::-webkit-scrollbar {
-      display: none;
+      width: 3px; /* width of the entire scrollbar */
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #eee; /* color of the tracking area */
+      border-radius: 20px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #bbb; /* color of the scroll thumb */
+      border-radius: 20px; /* roundness of the scroll thumb */
     }
   }
 }

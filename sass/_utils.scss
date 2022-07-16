@@ -1,5 +1,10 @@
+@use 'variables' as *;
+
 .collapse {
   transform: translateX(-170px);
+}
+.collapsed-right {
+  transform: translateX(100px);
 }
 .hidden {
   display: none;
@@ -15,4 +20,13 @@
 .dark-sidebar {
   background-color: #050505;
   color: white;
+}
+.serif {
+  font-family: $serif;
+}
+.sans {
+  font-family: $sans;
+}
+.mono {
+  font-family: $mono;
 }

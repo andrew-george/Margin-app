@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap");
 :root {
   box-sizing: border-box;
   margin: 0;
@@ -31,17 +33,6 @@ body {
   font-family: "Karla";
 }
 
-main::-webkit-scrollbar {
-  width: 6px; /* width of the entire scrollbar */
-}
-main::-webkit-scrollbar-track {
-  background: #000000; /* color of the tracking area */
-}
-main::-webkit-scrollbar-thumb {
-  background-color: rgb(255, 255, 255); /* color of the scroll thumb */
-  border-radius: 20px; /* roundness of the scroll thumb */
-}
-
 .app {
   display: flex;
   height: 100vh;
@@ -63,7 +54,7 @@ main {
   display: flex;
   justify-content: center;
   width: 100%;
-  height: 100%;
+  height: 100vh;
 }
 
 .head {
@@ -166,8 +157,8 @@ footer .theme-toggler {
 .hero-area {
   display: flex;
   flex-direction: column;
-  max-width: 70%;
-  height: 80vh;
+  width: 70%;
+  height: 90vh;
   margin: auto;
 }
 @media (min-width: 768px) {
@@ -186,10 +177,11 @@ footer .theme-toggler {
 .hero-area .main-title {
   font-family: "DM Serif Display";
   font-size: 2rem;
-  padding: 0.8rem 0;
+  padding: 2rem 0;
   border: none;
   resize: none;
   line-height: 0.6;
+  margin-top: 2rem;
 }
 @media (min-width: 768px) {
   .hero-area .main-title {
@@ -204,22 +196,35 @@ footer .theme-toggler {
 }
 .hero-area .body {
   border: none;
-  height: 100%;
+  height: 100vw;
   font-family: "Karla";
   font-size: 1rem;
   font-weight: 500;
   margin-top: 3rem;
   resize: none;
+  overflow-y: auto;
 }
 .hero-area .body:focus {
   outline: none;
 }
 .hero-area .body::-webkit-scrollbar {
-  display: none;
+  width: 3px; /* width of the entire scrollbar */
+}
+.hero-area .body::-webkit-scrollbar-track {
+  background: #eee; /* color of the tracking area */
+  border-radius: 20px;
+}
+.hero-area .body::-webkit-scrollbar-thumb {
+  background-color: #bbb; /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
 }
 
 .collapse {
   transform: translateX(-170px);
+}
+
+.collapsed-right {
+  transform: translateX(100px);
 }
 
 .hidden {
@@ -239,4 +244,16 @@ footer .theme-toggler {
 .dark-sidebar {
   background-color: #050505;
   color: white;
+}
+
+.serif {
+  font-family: "DM Serif Display";
+}
+
+.sans {
+  font-family: "Karla";
+}
+
+.mono {
+  font-family: "Courier Prime";
 }/*# sourceMappingURL=index.css.map */
