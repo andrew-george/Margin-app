@@ -11,6 +11,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 1rem;
   }
 
   .copyright {
@@ -20,7 +21,6 @@ footer {
     color: #aaa;
     transition: 0.2s ease all;
     text-decoration: none;
-    margin-bottom: 2rem;
 
     &:hover {
       // color: #000;
